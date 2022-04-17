@@ -1,6 +1,9 @@
 package ProductRepository;
 
+<<<<<<< HEAD
 import exeptions.NotFoundException;
+=======
+>>>>>>> 878b2c0997f7ab9c7e0496fd239580053d33fba1
 import ru.netology.domain.Product;
 
 public class ProductRepository {
@@ -18,7 +21,15 @@ public class ProductRepository {
 
     public Product[] findAll() {
         return items;
+<<<<<<< HEAD
 
+=======
+//        Product[] tmp = new Product[items.length];
+//        for (int i = 0; i < items.length; i++) {
+//            System.arraycopy(items,0,tmp,0,items.length);
+//        }
+//        return tmp;
+>>>>>>> 878b2c0997f7ab9c7e0496fd239580053d33fba1
     }
 
     public Product findById(int id) {
@@ -30,6 +41,7 @@ public class ProductRepository {
         return null;
     }
 
+<<<<<<< HEAD
 //    public void removeById(int id) {
 //        int length = items.length - 1;
 //        Product[] tmp = new Product[length];
@@ -60,3 +72,19 @@ public void removeById(int id) throws NotFoundException {
 
 }
 }
+=======
+    public void removeById(int id) {
+        int length = items.length - 1;
+        Product[] tmp = new Product[length];
+        int index = 0;
+        for (Product item : items) {
+            if (item.getId() != id) {
+                tmp[index] = item;
+                index++;
+            }
+        }
+        items = tmp;
+    }
+
+}
+>>>>>>> 878b2c0997f7ab9c7e0496fd239580053d33fba1
